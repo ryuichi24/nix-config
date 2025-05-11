@@ -1,4 +1,4 @@
-<h1 align="center">Dev Env</h1>
+<h1 align="center">Nix Config</h1>
 
 ## Install Nix
 
