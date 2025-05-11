@@ -10,6 +10,7 @@
       publisher = builtins.elemAt parts 0;
       name = builtins.elemAt parts 2;
     in
+      # https://github.com/nix-community/nix-vscode-extensions
       pkgs.vscode-marketplace.${publisher}.${name}
   ) (importedJson);
     in importedExtensions;

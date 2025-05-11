@@ -137,7 +137,7 @@
       "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-      "command": "list.select",
+      "command": "list.selectAndPreserveFocus",
       "key": "v",
       "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },

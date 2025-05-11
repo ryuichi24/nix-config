@@ -23,5 +23,6 @@
   "vscode-neovim.neovimInitVimPaths.darwin": "/Users/ryu/.config/nvim/init.lua",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
-  }
+  },
+  "workbench.sideBar.location": "right"
 }

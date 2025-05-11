@@ -9,8 +9,10 @@
             # use the same nixpkgs defined in this flake above
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        
+
         # MacOS-specific inputs
+        # https://nixcademy.com/posts/nix-on-macos/
+        # https://xyno.space/post/nix-darwin-introduction?utm_source=chatgpt.com
         nix-darwin = {
             url = "github:nix-darwin/nix-darwin";
             # use the same nixpkgs defined in this flake above
