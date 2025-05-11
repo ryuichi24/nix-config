@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 #  macOS's System configuration
 #  All the configuration options are documented here:
@@ -6,6 +6,18 @@
 {
   system = {
     stateVersion = 5;
+    # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
+    # activationScripts.postUserActivation.text = '';
+    activationScripts = {
+      postUserActivation = {
+        text =  ''
+        # change the default shell to bash
+        # activateSettings -u will reload the settings from the database and apply them to the current session,
+        # so we do not need to logout and login again to make the changes take effect.
+        /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+      '';
+      };
+    };
 
     defaults = {
       menuExtraClock = {
@@ -25,7 +37,7 @@
         # Hide desktop icons: When set to false, icons on the desktop will be hidden.
         CreateDesktop = false;
 
-        # Disable warning when changing file extensions: When set to false, the warning that appears when changing file extensions will be disabled.
+        # Disable warning whe changing file extensions: When set to false, the warning that appears when changing file extensions will be disabled.
         FXEnableExtensionChangeWarning = false;
 
         # Show path bar: When set to true, the file path will be displayed at the bottom of the Finder window.

@@ -42,6 +42,7 @@
       "katana"
       "gcc"
       "cmake"
+      "neovim"
 
       # ************* uninstalled list below ****************
       # "readline"
@@ -55,7 +56,6 @@
       "brave-browser"
       "google-chrome"
       "firefox"
-      "visual-studio-code"
       "obsidian"
       "readdle-spark"
       "bitwarden"
@@ -91,6 +91,7 @@
       # ************* uninstalled list below ****************
       # "docker"
       # "clipgrab"
+      # "visual-studio-code" >> installed via home-manager
     ];
 
     masApps = {

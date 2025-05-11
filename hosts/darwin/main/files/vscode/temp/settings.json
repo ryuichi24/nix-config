@@ -1,0 +1,65 @@
+{
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "git.autofetch": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "githubPullRequests.pullBranch": "never",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.newWindowProfile": "ryu",
+  "keyboard.dispatch": "keyCode",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "files.eol": "\n",
+    "editor.defaultColorDecorators": "never"
+  },
+  "terminal.integrated.fontSize": 23,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.lineNumbers": "relative",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Ayu Dark", // This is to fix the issue with the keyboard shortcuts
+  "vim.insertModeKeyBindings": [
+    {
+      //exit insert mode
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // https://stackoverflow.com/a/74936010
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000"
+  },
+  "window.titleBarStyle": "custom",
+  "vscode_vibrancy.opacity": 0.1,
+  "editor.lineHeight": 0,
+  "editor.fontSize": 13,
+  "terminal.integrated.gpuAcceleration": "off",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Ayu Dark",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/ryu/.config/nvim/init.lua"
+}

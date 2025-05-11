@@ -12,3 +12,8 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 ```bash
 ./scripts/apply.sh
 ```
+
+You can search Nix packages from here:
+https://search.nixos.org/packages
+
+https://www.felixsanz.dev/articles/nixos-made-me-go-back-to-windows

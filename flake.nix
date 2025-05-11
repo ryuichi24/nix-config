@@ -22,10 +22,15 @@
             # use the same nixpkgs defined in this flake above
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        nix-vscode-extensions = {
+            url = "github:nix-community/nix-vscode-extensions";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     # the @ symbol is used to aggregate the destructured input items
-    outputs = inputs@ { self, nixpkgs, home-manager, nix-darwin, nix-homebrew, ... }:
+    outputs = inputs@ { self, home-manager, nix-darwin, nix-homebrew, ... }:
     let
     # local variables
     systemArch = "aarch64-darwin"; # or x86_64-darwin for intel mac
@@ -53,7 +58,7 @@
                 modules = [
                     home-manager.darwinModules.home-manager
                     nix-homebrew.darwinModules.nix-homebrew
-                    ./envs/${env}/default.nix
+                    ./hosts/darwin/${env}/default.nix
                 ];
         
             };
