@@ -3,6 +3,9 @@
 # https://discussions.apple.com/thread/250729585?sortBy=rank 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
