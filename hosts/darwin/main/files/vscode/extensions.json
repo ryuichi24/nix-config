@@ -12,5 +12,6 @@
     "fosshaas.fontsize-shortcuts",
     "cardinal90.multi-cursor-case-preserve",
     "rangav.vscode-thunder-client",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "asvetliakov.vscode-neovim"
 ]
