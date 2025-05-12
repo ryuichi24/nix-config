@@ -1,5 +1,15 @@
 [
   {
+    "key": "space m r",
+    "command": "workbench.action.moveEditorToRightGroup",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space m d",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
     "command": "editor.action.showHover",
     "key": "space c h",
     "when": "neovim.mode == 'normal' && editorTextFocus",
