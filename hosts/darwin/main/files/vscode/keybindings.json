@@ -1,10 +1,10 @@
 [
   {
-    "command": "runCommands",
+    "command": "editor.action.showHover",
     "key": "space c h",
     "when": "neovim.mode == 'normal' && editorTextFocus",
     "args": {
-      "commands": ["editor.action.showHover", "editor.action.showHover"]
+      "focus": true
     }
   },
   {
