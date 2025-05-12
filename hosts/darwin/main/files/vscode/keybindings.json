@@ -45,22 +45,22 @@
   {
     "command": "workbench.action.navigateLeft",
     "key": "alt+h",
-    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused && !inQuickOpen"
   },
   {
     "command": "workbench.action.navigateRight",
     "key": "alt+l",
-    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused && !inQuickOpen"
   },
   {
     "command": "workbench.action.navigateUp",
     "key": "alt+k",
-    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused && !inQuickOpen"
   },
   {
     "command": "workbench.action.navigateDown",
     "key": "alt+j",
-    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused && !inQuickOpen"
   },
   {
     "command": "workbench.action.showAllEditors",
