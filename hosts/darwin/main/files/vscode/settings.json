@@ -30,5 +30,7 @@
     "jj": {
       "command": "vscode-neovim.escape"
     }
-  }
+  },
+  "editor.lineNumbers": "relative",
+  "editor.autoClosingBrackets": true
 }
