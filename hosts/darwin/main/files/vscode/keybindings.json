@@ -1,5 +1,28 @@
 [
   {
+    "command": "runCommands",
+    "key": "space c h",
+    "when": "neovim.mode == 'normal' && editorTextFocus",
+    "args": {
+      "commands": ["editor.action.showHover", "editor.action.showHover"]
+    }
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "v",
+    "command": "list.selectAndPreserveFocus",
+    "when": "referenceSearchVisible && listFocus"
+  },
+  {
     "key": "alt+j",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
@@ -22,22 +45,22 @@
   {
     "command": "workbench.action.navigateLeft",
     "key": "alt+h",
-    "when": "neovim.mode !== 'insert'"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
   },
   {
     "command": "workbench.action.navigateRight",
     "key": "alt+l",
-    "when": "neovim.mode !== 'insert'"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
   },
   {
     "command": "workbench.action.navigateUp",
     "key": "alt+k",
-    "when": "neovim.mode !== 'insert'"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
   },
   {
     "command": "workbench.action.navigateDown",
     "key": "alt+j",
-    "when": "neovim.mode !== 'insert'"
+    "when": "neovim.mode !== 'insert' && !editorHoverFocused"
   },
   {
     "command": "workbench.action.showAllEditors",
@@ -68,11 +91,6 @@
     "command": "editor.action.moveLinesUpAction",
     "key": "shift+k",
     "when": "neovim.mode !== 'insert' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.showHover",
-    "key": "shift+k",
-    "when": "neovim.mode == 'normal' && editorTextFocus"
   },
   {
     "command": "editor.action.codeAction",
