@@ -1,21 +1,36 @@
 [
   {
-    "key": "shift+w",
+    "key": "space f o",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space f a",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space f u",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+w",
     "command": "workbench.action.increaseViewWidth",
     "when": "editorTextFocus && neovim.mode == 'normal'"
   },
   {
-    "key": "alt+shift+w",
+    "key": "ctrl+shift+w",
     "command": "workbench.action.decreaseViewWidth",
     "when": "editorTextFocus && neovim.mode == 'normal'"
   },
   {
-    "key": "shift+h",
+    "key": "ctrl+h",
     "command": "workbench.action.increaseViewHeight",
     "when": "editorTextFocus && neovim.mode == 'normal'"
   },
   {
-    "key": "alt+shift+h",
+    "key": "ctrl+shift+h",
     "command": "workbench.action.decreaseViewHeight",
     "when": "editorTextFocus && neovim.mode == 'normal'"
   },
