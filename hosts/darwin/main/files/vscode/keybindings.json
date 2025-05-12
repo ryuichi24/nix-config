@@ -1,29 +1,43 @@
 [
   {
-    "key": "cmd+j",
+    "key": "alt+j",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
   {
-    "key": "cmd+k",
+    "key": "alt+k",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
   {
+    "key": "alt+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible && neovim.mode == 'insert'"
+  },
+  {
+    "key": "alt+k",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible && neovim.mode == 'insert'"
+  },
+  {
     "command": "workbench.action.navigateLeft",
-    "key": "alt+h"
+    "key": "alt+h",
+    "when": "neovim.mode !== 'insert'"
   },
   {
     "command": "workbench.action.navigateRight",
-    "key": "alt+l"
+    "key": "alt+l",
+    "when": "neovim.mode !== 'insert'"
   },
   {
     "command": "workbench.action.navigateUp",
-    "key": "alt+k"
+    "key": "alt+k",
+    "when": "neovim.mode !== 'insert'"
   },
   {
     "command": "workbench.action.navigateDown",
-    "key": "alt+j"
+    "key": "alt+j",
+    "when": "neovim.mode !== 'insert'"
   },
   {
     "command": "workbench.action.showAllEditors",
@@ -187,6 +201,22 @@
     "command": "runCommands",
     "key": "i",
     "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "runCommands",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && inputFocus",
+    "args": {
+      "commands": ["git.commit"]
+    }
+  },
+  {
+    "key": "cmd+enter",
+    "command": "runCommands",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && inputFocus",
+    "args": {
+      "commands": ["git.push"]
+    }
   },
   {
     "args": {
