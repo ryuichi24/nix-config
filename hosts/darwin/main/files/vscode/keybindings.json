@@ -1,5 +1,25 @@
 [
   {
+    "key": "shift+w",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "alt+shift+w",
+    "command": "workbench.action.decreaseViewWidth",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.increaseViewHeight",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "alt+shift+h",
+    "command": "workbench.action.decreaseViewHeight",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
     "key": "space m r",
     "command": "workbench.action.moveEditorToRightGroup",
     "when": "editorTextFocus && neovim.mode == 'normal'"
