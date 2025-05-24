@@ -20,6 +20,10 @@
   };
 
   home-manager.users.${username} = {
+    imports = [
+      ../../../libs/home-manager-util
+    ];
+
     programs.home-manager.enable = true;
 
     home.stateVersion = "23.05";
@@ -47,33 +51,47 @@
       };
     }; 
 
-    # vscode
-    # https://nixos.wiki/wiki/Visual_Studio_Code
-    # https://davi.sh/blog/2024/11/nix-vscode/
-    programs.vscode = {
-      enable = true;
-      # https://www.reddit.com/r/NixOS/comments/15mohek/installing_vscode_extensions_with_homemanager_not/
-      mutableExtensionsDir = false;
+   # vscode
+   # https://nixos.wiki/wiki/Visual_Studio_Code
+   # https://davi.sh/blog/2024/11/nix-vscode/
+   programs.vscode = {
+    #  enable = true;
+    # https://www.reddit.com/r/NixOS/comments/15mohek/installing_vscode_extensions_with_homemanager_not/
+    # mutableExtensionsDir = false;
 
-      profiles = {
-        default = let
-        vscodeHelper = import ../../../libs/vscode/importer { inherit pkgs; };
-        _userSettings = vscodeHelper.importSettings ./files/vscode/settings.json;
-        _keybindings = vscodeHelper.importKeyBindings ./files/vscode/keybindings.json;
-        _extensions = vscodeHelper.importExtensions ./files/vscode/extensions.json;
-        in {
-            userSettings = _userSettings;
-            keybindings = _keybindings;
-            extensions = _extensions;
-        };
-      };
-    };
+    #  profiles = {
+    #   default = let
+    #   vscodeHelper = import ../../../libs/vscode/importer { inherit pkgs; };
+    #   _userSettings = vscodeHelper.importSettings ./files/vscode/settings.json;
+    #   _keybindings = vscodeHelper.importKeyBindings ./files/vscode/keybindings.json;
+    #   _extensions = vscodeHelper.importExtensions ./files/vscode/extensions.json;
+    #   in {
+    #       userSettings = _userSettings;
+    #       keybindings = _keybindings;
+    #       extensions = _extensions;
+    #   };
+    # };
+   };
 
-    # # vscode
-    # home.file."Users/${username}/Library/Application\ Support/Code/User/settings.json".source = ./files/vscode/settings.json;
-    # home.file."Users/${username}/Library/Application\ Support/Code/User/keybindings.json".source = ./files/vscode/keybindings.json;
+
 
     # neovim
-    home.file.".config/nvim".source = ./files/nvim;
+    home.file.".config/nvim" = {
+      source = ./files/nvim;
+    };
+    
+    # # vscode
+    # home.file."/Users/${username}/Library/Application Support/Code/User/settings.json" = {
+    #   source = ./files/vscode/settings.json;
+    #   force = true;
+    #   mutable = true;
+    # };
+
+    # home.file."/Users/${username}/Library/Application Support/Code/User/keybindings.json" = {
+    #   source = ./files/vscode/keybindings.json;
+    #   force = true;
+    #   mutable = true;
+    # };
+
   };
 }

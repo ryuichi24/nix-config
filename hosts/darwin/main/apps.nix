@@ -43,6 +43,9 @@
       "gcc"
       "cmake"
       "neovim"
+      "ollama"
+      "go"
+      "xtool-org/tap/xtool"
 
       # ************* uninstalled list below ****************
       # "readline"
@@ -53,6 +56,10 @@
 
     # `brew install --cask`
     casks = [
+      "claude"
+      "windsurf"
+      "bruno"
+      "cursor"
       "brave-browser"
       "google-chrome"
       "firefox"
@@ -87,6 +94,9 @@
       "blackhole-16ch"
       # https://formulae.brew.sh/cask/orbstack
       "orbstack"
+      "font-symbols-only-nerd-font"
+      "qt-creator"
+
 
       # ************* uninstalled list below ****************
       # "docker"

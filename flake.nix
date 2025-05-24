@@ -58,9 +58,9 @@
                 inherit specialArgs;
                 system = systemArch;
                 modules = [
-                    home-manager.darwinModules.home-manager
+                    home-manager.darwinModules.home-manager 
                     nix-homebrew.darwinModules.nix-homebrew
-                    ./hosts/darwin/${env}/default.nix
+                    ./hosts/darwin/${env}
                 ];
         
             };
